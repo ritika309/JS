@@ -1,15 +1,12 @@
-body
-{    
+body{    
     background-image: linear-gradient(to top, #fec3c5 0%, #ffe2af 99%);
 }
-.col-md-6
-{
+.col-md-6{
     border: 7px solid black;
     margin-top: 150px !important;
     padding: 20px;
 }
-button
-{
+button{
     margin: 20px !important;
     border: 4px solid rgba(128, 128, 128, 0.692) !important;
 }
