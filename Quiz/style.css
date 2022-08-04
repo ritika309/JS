@@ -1,0 +1,17 @@
+body{
+    
+    background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
+}
+.col-md-8{
+    margin-top: 150px !important;
+    background-color: rgb(254, 254, 241);
+    padding: 10px;
+}
+h1{background-color: rgb(148, 226, 246)!important;
+}
+input,label,ol{
+    list-style: lower-alpha !important;
+    font-size: 20px;
+    margin: 10px;
+    font-weight: bold;
+}
