@@ -44,7 +44,7 @@ var quizdata = [
 
 
 var quiz= document.getElementById('quizdiv')
-var answer = document.querySelectorAll('. answer')
+var answer = document.querySelectorAll('.answer')
 var ques= document.getElementById('ques')
 var option_a= document.getElementById('aval')
 var option_b= document.getElementById('bval')
@@ -59,12 +59,13 @@ var score=0
 loadquiz()
 
 function loadquiz(){
+    
     deselect()
     ques.innerHTML = quizdata[currentQuestion].ques
-    option_a.innerHTML = quizdata[currentQuestion].a
-    option_b.innerHTML= quizdata[currentQuestion].b
-    option_c.innerHTML = quizdata[currentQuestion].c
-    option_d.innerHTML= quizdata[currentQuestion].d
+    option_a.innerText = quizdata[currentQuestion].a
+    option_b.innertext= quizdata[currentQuestion].b
+    option_c.innerText = quizdata[currentQuestion].c
+    option_d.innerText= quizdata[currentQuestion].d
     
 
 }
@@ -75,5 +76,21 @@ function deselect(){
 
 submitbtn.addEventListener('click',()=>{
     var selectedoption;
-    answer.forEach
+    answer.forEach(answer=>{
+        if(answer.checked)
+        {
+            selectedoption=answer.id
+        }
+    })
+    if (selectedoption==quizdata[currentQuestion].correct)
+    {
+        score+=1
+    }
+    currentQuestion+=1
+    if(currentQuestion==quizdata.length)
+    {
+        document.getElementById('quizdiv').innerHTML = `<h3> You have answered ${score} / ${quizdata.length} correctly</h3`
+    }
+    else
+        loadquiz()
 })
