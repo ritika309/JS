@@ -1,0 +1,9 @@
+body{
+    background-image: linear-gradient(to right, #eb8faa 0%, #f9e889 100%);
+}
+h1{
+    margin-top: 50px !important;
+    margin-bottom: 30px !important;
+    background-color: rgba(163, 77, 129, 0.393);
+    color: white;
+}
